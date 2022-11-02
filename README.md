@@ -7,3 +7,5 @@ all of the functions for initializing a deck will be placed.
 go version used: go1.19.3
 instructions on how to install go: https://go.dev/doc/install
 how to run the files: go run main.go deck.go
+
+test
