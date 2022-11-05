@@ -1,8 +1,3 @@
 # go
 
-This repo is dedicated in learning go from goole <br />
-Repo includes different exercises in the branches. Use < git checkout > to switch branches and run different exercises <br />
-
-go version used: go1.19.3 <br />
-instructions on how to install go: https://go.dev/doc/install <br />
-how to run the files: go run filename.go
+This problem is described in this url -> https://codingdojo.org/kata/FizzBuzz/
