@@ -7,6 +7,6 @@ go version used: go1.19.3 <br />
 instructions on how to install go: https://go.dev/doc/install <br />
 how to run the files: go run filename.go
 
-Possible Configuration Errors:
-Error:  go: cannot find main module, but found .git/config 
+Possible Configuration Errors: <br />
+Error:  go: cannot find main module, but found .git/config <br />
 Solution:   go env -w GO111MODULE=off [Refference](https://stackoverflow.com/questions/24575680/new-lines-inside-paragraph-in-readme-md)
