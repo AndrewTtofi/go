@@ -1,6 +1,6 @@
 # go
 
-This repo is dedicated in learning go from goole <br />
+This repo is dedicated in learning Go <br />
 Repo includes different exercises in the branches. Use < git checkout > to switch branches and run different exercises <br />
 
 go version used: go1.19.3 <br />
