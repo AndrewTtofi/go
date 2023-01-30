@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	cards := readFromFile("giannis")
+	cards := newDeck()
 	// hand, remainingDeck := deal(cards, 5)
 	// fmt.Println("this is the hand")
 	// hand.print()

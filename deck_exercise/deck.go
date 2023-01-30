@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // create a new type of deck
@@ -17,6 +18,7 @@ func (d deck) print() {
 	}
 }
 
+// function to create/initialize a new Deck
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
@@ -29,6 +31,7 @@ func newDeck() deck {
 	return cards
 }
 
+// function to deal a deck based on the handsize given from the user
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
@@ -37,10 +40,12 @@ func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
 }
 
+// save the deck to a file locally with permissions 0666
 func (d deck) saveToFile(filename string) error {
 	return os.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
+// read from a file stored locally and pass the content to a new deck
 func readFromFile(filename string) deck {
 	bs, err := os.ReadFile(filename)
 	if err != nil {
@@ -51,10 +56,13 @@ func readFromFile(filename string) deck {
 	return deck(s)
 }
 
+// shuffle the deck
 func (d deck) shuffle() {
+	source := rand.NewSource(time.Now().UnixMicro())
+	r := rand.New(source)
+
 	for i := range d {
-		newPosition := rand.Intn(len(d) - 1)
+		newPosition := r.Intn(len(d) - 1)
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
-
 }
