@@ -21,5 +21,15 @@ func main() {
 			zipCode: 5321,
 		},
 	}
-	fmt.Printf("%+v\n", alex)
+
+	alex.newLastName("kwstakis")
+	alex.print()
+}
+
+func (pointerToPerson *person) newLastName(lastname string) {
+	(*pointerToPerson).lastName = lastname
+}
+
+func (pointerToPerson *person) print() {
+	fmt.Printf("%+v\n", pointerToPerson)
 }
