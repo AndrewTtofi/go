@@ -1,0 +1,6 @@
+version: '3'
+services:
+  fizzbuzz:
+    container_name: fizzbuzz 
+    build:
+      dockerfile: ./Dockerfile
