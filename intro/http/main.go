@@ -12,5 +12,5 @@ func main() {
 		fmt.Println("Error is: ", err)
 		os.Exit(1)
 	}
-	fmt.Println(resp)
+	fmt.Println(resp.Body)
 }
