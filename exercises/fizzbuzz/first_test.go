@@ -6,10 +6,10 @@ import (
 )
 
 func TestFizz(t *testing.T) {
-	test_fizzbuzz := initCount(101)
-	for i := range test_fizzbuzz {
+	testFizzbuzz := initCount(101)
+	for i := range testFizzbuzz {
 		if i%3 == 0 {
-			if test_fizzbuzz[i] == "Fizz" {
+			if testFizzbuzz[i] == "Fizz" {
 				t.Errorf("Fizz does not exist")
 			} else {
 				fmt.Printf("it exists")

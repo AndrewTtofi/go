@@ -1,19 +1,11 @@
 package main
 
 import (
+	"even_odd/internal"
 	"fmt"
 )
 
 func main() {
-	var n []int
-	for i := 0; i < 11; i++ {
-		n = append(n, i)
-	}
-	for i := range n {
-		if n[i]%2 == 0 {
-			fmt.Println("The number ", n[i], " is even")
-		} else {
-			fmt.Println("The number ", n[i], " is odd")
-		}
-	}
+	fmt.Println(internal.EvenOdd(10))
+	fmt.Println(internal.SpecificNum(5))
 }
